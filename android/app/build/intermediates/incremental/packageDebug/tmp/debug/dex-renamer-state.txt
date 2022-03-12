@@ -1,0 +1,13 @@
+#Fri Mar 11 03:42:54 BRT 2022
+path.3=6/classes.dex
+path.2=14/classes.dex
+path.1=0/classes.dex
+path.0=classes.dex
+base.3=R\:\\React Native\\NotesApp\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+base.2=R\:\\React Native\\NotesApp\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.1=R\:\\React Native\\NotesApp\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=R\:\\React Native\\NotesApp\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
