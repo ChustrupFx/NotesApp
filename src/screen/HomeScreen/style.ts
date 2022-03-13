@@ -18,7 +18,7 @@ export const Title = styled.Text`
   margin-top: 10px;
 `;
 
-export const NotesList = styled.ScrollView`
+export const NotesList = styled.FlatList`
   width: 100%;
   flex: 1;
   padding: 0 20px;

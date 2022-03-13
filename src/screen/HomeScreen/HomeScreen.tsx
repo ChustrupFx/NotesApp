@@ -20,10 +20,11 @@ const HomeScreen: React.FC = () => {
       <Container>
         <Title>MY NOTES</Title>
 
-        <NotesList>
-          {data.map((_, index) => {
+        <NotesList
+          data={data}
+          renderItem={() => {
             return (
-              <NoteItem key={index}>
+              <NoteItem>
                 <NoteTitle>NOTE TITLE</NoteTitle>
                 <NoteItemButtons>
                   <Button>
@@ -35,8 +36,8 @@ const HomeScreen: React.FC = () => {
                 </NoteItemButtons>
               </NoteItem>
             );
-          })}
-        </NotesList>
+          }}
+        />
       </Container>
     </>
   );
