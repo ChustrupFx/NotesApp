@@ -7,14 +7,25 @@
  *
  * @format
  */
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
 import * as React from 'react';
 import HomeScreen from './screen/HomeScreen/HomeScreen';
 
+const Stack = createNativeStackNavigator();
+
 const App: React.FC = () => {
   return (
-    <>
-      <HomeScreen />
-    </>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{headerShown: false}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
