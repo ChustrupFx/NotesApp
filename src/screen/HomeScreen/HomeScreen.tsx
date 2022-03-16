@@ -1,25 +1,16 @@
 import * as React from 'react';
-import {
-  Container,
-  Title,
-  NotesList,
-  NoteItem,
-  NoteTitle,
-  NoteItemButtons,
-  Button,
-} from './style';
+import {NotesList, NoteItem, NoteTitle, NoteItemButtons, Button} from './style';
 
 import MUI from 'react-native-vector-icons/MaterialIcons';
 import FA from 'react-native-vector-icons/FontAwesome';
+import DefaultScreenLayout from '../../components/DefaultScreenLayout/DefaultScreenLayout';
 
 const data = new Array(50).fill(0);
 
 const HomeScreen: React.FC = () => {
   return (
     <>
-      <Container>
-        <Title>MY NOTES</Title>
-
+      <DefaultScreenLayout title="MY NOTES">
         <NotesList
           data={data}
           renderItem={() => {
@@ -38,7 +29,7 @@ const HomeScreen: React.FC = () => {
             );
           }}
         />
-      </Container>
+      </DefaultScreenLayout>
     </>
   );
 };
