@@ -1,8 +1,5 @@
 import styled from 'styled-components/native';
 
-const blueColor = '#4F7CAC';
-const orangeColor = '#FF7F11';
-
 export const NotesList = styled.FlatList`
   width: 100%;
   flex: 1;
@@ -11,7 +8,7 @@ export const NotesList = styled.FlatList`
 
 export const NoteItem = styled.TouchableOpacity`
   width: 100%;
-  background-color: ${orangeColor};
+  background-color: ${props => props.theme.orangeColor};
   border-radius: 5px;
   color: white;
   padding: 10px;
