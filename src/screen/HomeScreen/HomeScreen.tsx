@@ -7,12 +7,6 @@ import FA from 'react-native-vector-icons/FontAwesome';
 import DefaultScreenLayout from '../../components/DefaultScreenLayout/DefaultScreenLayout';
 import AsyncStorage from '@react-native-community/async-storage';
 
-interface Note {
-  title: string;
-  content: string;
-  timestamp: number;
-}
-
 const HomeScreen: React.FC<NativeStackScreenProps<any>> = ({navigation}) => {
   const [data, setData] = React.useState([]);
 

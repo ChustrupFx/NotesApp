@@ -15,10 +15,11 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as React from 'react';
 import HomeScreen from './screen/HomeScreen/HomeScreen';
 import CreateNoteScreen from './screen/CreateNoteScreen/CreateNoteScreen';
+import EditNote from './screen/EditNote/EditNote';
 
 import themeCfg from './style/theme';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const App: React.FC = () => {
   return (
@@ -28,7 +29,12 @@ const App: React.FC = () => {
           screenOptions={{
             headerShown: false,
           }}
-          initialRouteName="Home">
+          initialRouteName="EditNote">
+          <Stack.Screen
+            name="EditNote"
+            component={EditNote}
+            initialParams={{title: '', content: '', timestamp: 0}}
+          />
           <Stack.Screen name="CreateNote" component={CreateNoteScreen} />
           <Stack.Screen name="Home" component={HomeScreen} />
         </Stack.Navigator>
