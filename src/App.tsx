@@ -27,7 +27,8 @@ const App: React.FC = () => {
         <Stack.Navigator
           screenOptions={{
             headerShown: false,
-          }}>
+          }}
+          initialRouteName="Home">
           <Stack.Screen name="CreateNote" component={CreateNoteScreen} />
           <Stack.Screen name="Home" component={HomeScreen} />
         </Stack.Navigator>

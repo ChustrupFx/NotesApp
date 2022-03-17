@@ -6,11 +6,6 @@ import {Alert, KeyboardAvoidingView, Platform, ScrollView} from 'react-native';
 import {TitleInput, ContentInput, SubmitButton, ButtonText} from './style';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-interface Note {
-  title: string;
-  content: string;
-}
-
 const CreateNoteScreen: React.FC<NativeStackScreenProps<any>> = ({
   navigation,
 }) => {
@@ -63,7 +58,7 @@ const CreateNoteScreen: React.FC<NativeStackScreenProps<any>> = ({
         ? JSON.parse(allNotesJSONString)
         : {};
 
-      allNotesParsed[Date.now()] = {title, content};
+      allNotesParsed[Date.now()] = {title, content, timestamp: Date.now()};
 
       await AsyncStorage.setItem('notes', JSON.stringify(allNotesParsed));
 
